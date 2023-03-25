@@ -1,6 +1,6 @@
 ## GodMode Wallet Classifier
 
-### A small ERC-20 Token classifying app for wallets.
+### A small ERC-20 Token classifying Nest.js app for wallets.
 
 #### The app exposes single restful GET endpoint:
 ```
@@ -9,9 +9,9 @@
 Query parameters:
 - address (wallet address)
 
-Example request:
+Example request url:
 ```
-/wallet?address=0xA69babEF1cA67A37Ffaf7a485DfFF3382056e78C
+http://localhost:3000/wallet?address=0xA69babEF1cA67A37Ffaf7a485DfFF3382056e78C
 ```
 
 Proper request to this endpoint with the wallet address retrieves all the ERC=20 token balances in the wallet and checks if there is more than predefined threshold amount of tokens in it.
