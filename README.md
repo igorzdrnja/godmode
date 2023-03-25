@@ -18,7 +18,7 @@ Proper request to this endpoint with the wallet address retrieves all the ERC=20
 If there is, wallet's classification for that token is 'GodLike'. If there are no tokens present in the wallet, null is returned as balance for the token.
 
 Token symbols to check the wallet for GodLike classifications are stored in the local tokens.csv file in the src folder,
-for convenient updating of the desired tokens to be checked for, including thresholds. Sample file with more than 2000 tokens is included in this repository.
+for convenient updating of the desired tokens to be checked for, including thresholds. Sample file with more than 1500 tokens is included in this repository.
 If threshold for the particular token is not present in the file, it will be randomly selected between 0 and MAX_RANDOM_THRESHOLD_USED number from the .env environment variables file.
 On every request, token data will be first read from tokens csv file, which means the csv file data can be modified without the app being restarted.
 

@@ -26,8 +26,8 @@ export class WalletService {
     // Read token input data from the local tokens.csv file
     const filePath = path.join(process.cwd(), 'src/tokens.csv');
     const fileContent = fs.readFileSync(filePath, { encoding: 'utf8' });
-    const lines = fileContent.trim().split('\n');
-    for (let i = 0; i < lines.length; i++) {
+    const lines = fileContent.trim().split(/\r\n|\r|\n/g);
+    for (let i = 1; i < lines.length; i++) {
       const [address, symbol, _, t, network] = lines[i].split(',');
 
       let threshold = parseInt(t);
