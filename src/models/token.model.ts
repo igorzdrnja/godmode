@@ -1,8 +1,9 @@
+export type NetworkUsed = 'homestead'|'mainnet'|'ropsten'|'rinkeby'|'kovan'|'goerli'
+
 export interface Token {
-  network: string;
+  network?: NetworkUsed;
   address: string;
   threshold: number;
-  abi: Array<string>|string;
-  symbol: string;
+  abi?: Array<string>|string;
 }
 
